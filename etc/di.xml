@@ -8,6 +8,14 @@
         </arguments>
     </type>
 
+    <type name="Magento\MediaGalleryIntegration\Plugin\SaveImageInformation">
+        <arguments>
+            <argument name="imageExtensions" xsi:type="array">
+                <item name="mp4" xsi:type="string">mp4</item>
+            </argument>
+        </arguments>
+    </type>
+
     <type name="Magento\Cms\Model\Wysiwyg\Images\Storage">
         <plugin name="set_file_uploaded_type_to_null" type="MageSuite\MediaGallery\Plugin\Cms\Model\Wysiwyg\Images\Storage\UnsetUploadedFileType"/>
     </type>
