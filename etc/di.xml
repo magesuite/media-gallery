@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\MediaGallerySynchronization\Model\FetchMediaStorageFileBatches"
+                type="MageSuite\MediaGallery\Model\MediaGallerySynchronization\FetchMediaStorageInAllowedFolders"/>
+
     <type name="Magento\MediaGallerySynchronization\Model\FetchMediaStorageFileBatches">
         <arguments>
             <argument name="fileExtensions" xsi:type="array">
@@ -17,6 +20,6 @@
     </type>
 
     <type name="Magento\Cms\Model\Wysiwyg\Images\Storage">
-        <plugin name="set_file_uploaded_type_to_null" type="MageSuite\MediaGallery\Plugin\Cms\Model\Wysiwyg\Images\Storage\UnsetUploadedFileType"/>
+        <plugin name="unset_uploaded_file_type" type="MageSuite\MediaGallery\Plugin\Magento\Cms\Model\Wysiwyg\Images\Storage\UnsetUploadedFileType"/>
     </type>
 </config>

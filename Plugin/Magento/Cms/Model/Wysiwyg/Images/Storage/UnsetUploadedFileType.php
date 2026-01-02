@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace MageSuite\MediaGallery\Plugin\Cms\Model\Wysiwyg\Images\Storage;
+namespace MageSuite\MediaGallery\Plugin\Magento\Cms\Model\Wysiwyg\Images\Storage;
 
 class UnsetUploadedFileType
 {
