@@ -67,6 +67,7 @@ class FetchMediaStorageInAllowedFolders extends \Magento\MediaGallerySynchroniza
     {
         try {
             return $path
+                && !str_contains($path, \Magento\Cms\Model\Wysiwyg\Images\Storage::THUMBS_DIRECTORY_NAME)
                 && !$this->isPathExcluded->execute($path)
                 && preg_match('#\.(' . implode("|", $this->fileExtensions) . ')$# i', $path);
         } catch (\Exception $exception) {
